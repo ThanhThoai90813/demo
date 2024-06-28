@@ -30,20 +30,10 @@ public class UserController {
         return userService.getUser();
     }
 
-    @GetMapping("/{userId}")
+    @GetMapping("/{userId1}")
     UserResponse getUser(@PathVariable String userId) {
         return userService.getUserById(userId);
     }
 
-    @PutMapping("/{userId}")
-    UserResponse updateUser(@PathVariable String userId, @RequestBody UserUpdateRequest request){
-    return userService.updateUser(userId, request);
-    }
-
-    @DeleteMapping("/{userId}")
-    String deleteUser(@PathVariable String userId){
-        userService.deleteUser(userId);
-        return "user has been delete";
-    }
 
 }
