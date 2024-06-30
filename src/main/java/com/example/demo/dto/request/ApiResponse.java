@@ -13,6 +13,21 @@ import lombok.experimental.FieldDefaults;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ApiResponse <T>{
      int code = 1000;
+     int ok = 1;
+
+     @Override
+     protected Object clone() throws CloneNotSupportedException {
+          return super.clone();
+     }
+
+     public String getMessage() {
+          return message;
+     }
+
+     public int getOk() {
+          return ok;
+     }
+
      String message;
      T result;
 }
