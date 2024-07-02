@@ -17,11 +17,4 @@ public class UserUpdateRequest {
     String lastName;
     LocalDate dob;
     String email;
-    String phone;
-    String address;
-    String city;
-    String state;
-    String country;
-    String zip;
-    String role;
 }
